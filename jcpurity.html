@@ -16,11 +16,11 @@
         function calculatescore() {
           var score = document.querySelectorAll('input[type="checkbox"]:checked').length;
           var finalscore = 5 - score
-          document.getElementById("scoreheader").textContent = finalscore;
+          document.getElementById("scoreheader").textContent = `Score: ${finalscore}`;
           document.getElementById("scoreheader").removeAttribute("hidden")
         }
       </script>
-      <br><p>blaster5</p>
+      <br><p>blaster6</p>
       <h1 hidden id="scoreheader"></h1>
     </form>
   </body>
