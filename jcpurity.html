@@ -10,12 +10,18 @@
       <input type="checkbox" name="pure" id="pure2">Have you ever been permbanned on jumpcraft?<br>
       <input type="checkbox" name="pure" id="pure3">Have you ever been jailed on jumpcraft?<br>
       <input type="checkbox" name="pure" id="pure4">Have you ever hacked on jumpcraft?<br>
-      <input type="checkbox" name="pure" id="pure5">Have you ever been muted on jumpcraft?<br>
-      <input type="button" onClick="fUNCTION" style="height:50px; width:500px;" value="Calculate Score">
+      <input type="checkbox" name="pure" id="pure5">Have you ever been muted on jumpcraft?<br><br>
+      <input type="button" onClick="calculatescore();" style="height:50px; width:500px;" value="Calculate Score">
       <script language="javascript" type="text/javascript">
-        var score = document.querySelectorAll('input[type="checkbox"]:checked').length;
+        function calculatescore() {
+          var score = document.querySelectorAll('input[type="checkbox"]:checked').length;
+          var finalscore = 5 - score
+          document.getElementById("scoreheader").textContent = finalscore;
+          document.getElementById("scoreheader").removeAttribute("hidden")
+        }
       </script>
-      <br><p>blaster4</p>
+      <br><p>blaster5</p>
+      <h1 hidden id="scoreheader"></h1>
     </form>
   </body>
 </html>
